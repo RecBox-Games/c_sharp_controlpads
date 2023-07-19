@@ -61,7 +61,7 @@ public class cp_for_text : MonoBehaviour
     }
 
     // ---- Library Glue Functions ----
-    bool ClientsChanged() {
+    public bool ClientsChanged() {
         bool b = false;
         int result = ControlpadsLibrary.clients_changed(ref b);
         if (result != 0) {
@@ -70,7 +70,7 @@ public class cp_for_text : MonoBehaviour
         return b;
     }
     
-    List<string> GetClientHandles() {
+    public List<string> GetClientHandles() {
         c_flat_string_vec c_flat_handles = new c_flat_string_vec();
         int result = ControlpadsLibrary.get_client_handles(ref c_flat_handles);
         if (result != 0) {
@@ -81,11 +81,11 @@ public class cp_for_text : MonoBehaviour
         return handles;
     }
 
-    void SendMessage(string client, string message) {
+    public void SendMessage(string client, string message) {
         ControlpadsLibrary.send_message(client, message);
     }
-    
-    List<string> GetMessages(string client) {
+
+    public List<string> GetMessages(string client) {
         c_flat_string_vec c_flat_messages = new c_flat_string_vec();
         int result = ControlpadsLibrary.get_messages(client, ref c_flat_messages);
         if (result != 0) {
@@ -97,7 +97,7 @@ public class cp_for_text : MonoBehaviour
     }
 
     // ---- Library Glue Helper ----    
-    List<string> CFlatToList(c_flat_string_vec cFlat) {
+    public List<string> CFlatToList(c_flat_string_vec cFlat) {
         List<string> list = new List<string>();
         int char_index = 0;
         for (UInt64 lens_i = 0; lens_i < cFlat.lens_len; lens_i++) {
