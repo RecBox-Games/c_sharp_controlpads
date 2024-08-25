@@ -1,3 +1,20 @@
+// Copyright 2022-2024 RecBox, Inc.
+//
+// This file is part of the c_sharp_controlpads repository.
+//
+// c_sharp_controlpads is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by the 
+// Free Software Foundation, either version 3 of the License, or (at your option)
+// any later version.
+// 
+// c_sharp_controlpads is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+// or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+// more details.
+// 
+// You should have received a copy of the GNU General Public License along with
+// c_sharp_controlpads. If not, see <https://www.gnu.org/licenses/>.
+
 #![feature(vec_into_raw_parts)]
 use std::os::raw::c_char;
 use std::ffi::{CStr, CString};
